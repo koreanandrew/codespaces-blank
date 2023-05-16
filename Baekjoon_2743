@@ -1,0 +1,14 @@
+package baekjoon.week5;
+
+import java.util.Scanner;
+
+
+
+public class Baekjoon_2743 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int length = input.length();
+        System.out.println(length);
+    }
+}

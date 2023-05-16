@@ -1,0 +1,30 @@
+package baekjoon.week5;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Baekjoon_1158 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int K = scanner.nextInt();
+        
+        LinkedList<Integer> numbers = new LinkedList<>();
+        for (int i = 1; i <= N; i++) {
+            numbers.add(i);
+        }
+        
+        StringBuilder result = new StringBuilder();
+        int idx = 0;
+        
+        while (!numbers.isEmpty()) {
+            idx = (idx + K - 1) % numbers.size();
+            result.append(numbers.remove(idx)).append(", ");
+        }
+        
+        // 마지막에 추가된 ", " 제거
+        result.setLength(result.length() - 2);
+        
+        System.out.println("<" + result.toString() + ">");
+    }
+}
